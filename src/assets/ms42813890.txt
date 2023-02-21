@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "lusic-dev.web.app",
+  "Id": "01bdc8e6-e6cd-47c5-a543-ea5cee8085ef"
+}
