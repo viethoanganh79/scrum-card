@@ -1,6 +1,8 @@
 {
   "hosting": {
     "source": ".",
+    "site": "mswp-scrum",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
