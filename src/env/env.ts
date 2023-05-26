@@ -1,11 +1,11 @@
 export const environment = {
     production: false,
     firebaseConfig: {
-        apiKey: "AIzaSyA4Jxx9o_L1AhSM8Tjf9CC7fd7DvoEp6Z8",
-        authDomain: "lusic-dev.firebaseapp.com",
-        projectId: "lusic-dev",
-        storageBucket: "lusic-dev.appspot.com",
-        messagingSenderId: "828033751261",
-        appId: "1:828033751261:web:0c711ff09c437a7948e334"
+        apiKey: "AIzaSyDmZ4Rxvzog6LiGXhohNrPaSrC9S8Zah9I",
+        authDomain: "scrum-card-sehc.firebaseapp.com",
+        projectId: "scrum-card-sehc",
+        storageBucket: "scrum-card-sehc.appspot.com",
+        messagingSenderId: "944868620611",
+        appId: "1:944868620611:web:f3ebe599210e22f5e657f6"
     }
 };
