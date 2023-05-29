@@ -3,11 +3,11 @@ import { Firestore, collectionData, collection, doc, setDoc, getDocs, query, whe
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user-sign.component.html',
-  styleUrls: ['./user-sign.component.scss'],
+  selector: 'app-board',
+  templateUrl: './user-board.component.html',
+  styleUrls: ['./user-board.component.scss'],
 })
-export class UserSignComponent {
+export class UserBoardComponent {
 
   private router = inject(Router);
   private db = inject(Firestore);
@@ -26,8 +26,8 @@ export class UserSignComponent {
     return this._userList.includes(this.inputUser);
   }
 
-  gotoBoard() {
-    this.router.navigateByUrl('/board')
+  goback() {
+    this.router.navigateByUrl('/scrum')
   }
 
 }

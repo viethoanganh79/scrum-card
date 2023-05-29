@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./user-sign/user-sign.module').then((m) => m.UserSignModule),
   },
   {
+    path: 'board',
+    loadChildren: () => import('./user-board/user-board.module').then((m) => m.UserBoardModule),
+  },
+  {
     path: "**",
     redirectTo: "/scrum"
   }

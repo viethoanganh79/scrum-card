@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { UserSignComponent } from './user-sign.component';
+import { UserBoardComponent } from './user-board.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -9,12 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-  { path: 'scrum', component: UserSignComponent }
+  { path: '', component: UserBoardComponent }
 ];
 
 @NgModule({
   declarations: [
-    UserSignComponent
+    UserBoardComponent
   ],
   imports: [
     CommonModule,
@@ -26,4 +26,4 @@ const routes: Routes = [
     MatIconModule,
   ],
 })
-export class UserSignModule { }
+export class UserBoardModule { }
