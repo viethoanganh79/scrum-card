@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment } from '../env/env';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,4 @@ import { environment } from '../env/env';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lusic-webapp';
 }

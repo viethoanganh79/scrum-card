@@ -1,11 +1,11 @@
 export const environment = {
     production: true,
     firebaseConfig: {
-        apiKey: "AIzaSyB5txIgmlK83iW_AYNOUCv71HQE_pUQz7E",
-        authDomain: "scrum-mswp.firebaseapp.com",
-        projectId: "scrum-mswp",
-        storageBucket: "scrum-mswp.appspot.com",
-        messagingSenderId: "70341989165",
-        appId: "1:70341989165:web:331c2e7a517ccfa87839a4"
+        apiKey: "AIzaSyB65PZr6CJvyziOTHrnB0I_5vUk0W6LBew",
+        authDomain: "mswp-scrum-e092e.firebaseapp.com",
+        projectId: "mswp-scrum",
+        storageBucket: "mswp-scrum.appspot.com",
+        messagingSenderId: "330207171033",
+        appId: "1:330207171033:web:12e4ca8f909d26800e49c8"
     }
 };
