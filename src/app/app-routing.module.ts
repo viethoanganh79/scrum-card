@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: "scrum",
     loadChildren: () => import('./user-sign/user-sign.module').then((m) => m.UserSignModule),
   },
   {
@@ -11,8 +11,9 @@ const routes: Routes = [
     loadChildren: () => import('./user-board/user-board.module').then((m) => m.UserBoardModule),
   },
   {
-    path: "**",
-    redirectTo: "/scrum"
+    path: "",
+    redirectTo: "scrum",
+    pathMatch: "full"
   }
 ];
 

@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-  { path: 'scrum', component: UserSignComponent }
+  { path: '', component: UserSignComponent }
 ];
 
 @NgModule({
