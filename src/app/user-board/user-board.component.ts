@@ -12,10 +12,15 @@ export class UserBoardComponent {
   private router = inject(Router);
   private db = inject(Firestore);
   private _topic = collection(this.db, 'topic');
+  private _user = localStorage.getItem('zzz');
   _topicList: any[] = [];
   inputId = '';
 
-  constructor() {}
+  constructor() {
+    if (!this._user) {
+      this.router.navigateByUrl('/scrum');
+    }
+  }
 
   async ngOnInit() {
     let a = await getDocs(query(this._topic));

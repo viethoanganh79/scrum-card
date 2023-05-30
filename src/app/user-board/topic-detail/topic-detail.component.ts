@@ -28,7 +28,11 @@ export class TopicDetailComponent {
   ];
   selectedOpt: any;
 
-  constructor() {}
+  constructor() {
+    if (!this._user) {
+      this.router.navigateByUrl('/scrum');
+    }
+  }
 
   ngOnInit() {
     this.route.params.subscribe(params => {

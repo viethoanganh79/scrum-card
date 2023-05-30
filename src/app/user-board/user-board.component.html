@@ -6,7 +6,7 @@
 <div class="content d-flex justify-content-between">
   <mat-form-field>
     <mat-label>MSWP-</mat-label>
-    <input matInput [(ngModel)]="inputId" placeholder="Ticket ID">
+    <input type="number" matInput [(ngModel)]="inputId" placeholder="Ticket ID">
   </mat-form-field>
   <button [disabled]="inputChange()" (click)="createNewTopic()" mat-raised-button color="primary">Tạo</button>
 </div>
