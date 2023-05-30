@@ -1,12 +1,21 @@
 
 <div class="nav-bar">
-  <button mat-flat-button class="p-0" (click)="goback()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+  <button mat-flat-button class="p-0 bg-main" (click)="goback()"><mat-icon>keyboard_arrow_left</mat-icon></button>
   Topics board
 </div>
-<!-- <div class="d-flex" style="position: relative;">
+<div class="content d-flex justify-content-between">
   <mat-form-field>
-    <mat-label>Knox ID</mat-label>
-    <input matInput [(ngModel)]="inputUser">
+    <mat-label>MSWP-</mat-label>
+    <input matInput [(ngModel)]="inputId" placeholder="Ticket ID">
   </mat-form-field>
-  <button [disabled]="!inputChange()" (click)="gotoBoard()" style="position: absolute; right: 0;" mat-raised-button color="primary">Dzô...</button>
-</div> -->
+  <button [disabled]="inputChange()" (click)="createNewTopic()" mat-raised-button color="primary">Tạo</button>
+</div>
+<div class="content">
+  <mat-card *ngFor="let t of _topicList" class="mb-12">
+    <mat-card-header class="d-flex justify-content-between pb-16">
+      <mat-card-title>MSWP-{{ t.id }}</mat-card-title>
+      <mat-card-subtitle>Point: {{ t.result || '...'}}</mat-card-subtitle>
+      <button (click)="goTopic(t.id)" mat-raised-button color="primary">Go</button>
+    </mat-card-header>
+  </mat-card>
+</div>

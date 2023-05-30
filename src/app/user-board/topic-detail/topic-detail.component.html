@@ -1,0 +1,38 @@
+
+<div class="nav-bar">
+  <button mat-flat-button class="p-0 bg-main" (click)="goback()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+  MSWP-{{ selectedTopic?.id }}
+</div>
+<div class="content">
+  <mat-card>
+    <mat-card-header class="d-flex justify-content-between pb-16">
+      <mat-card-title>MSWP-{{ selectedTopic?.id }}</mat-card-title>
+      <mat-card-subtitle *ngIf="isOwner()">Point: {{ selectedTopic?.result || '...'}}</mat-card-subtitle>
+      <button *ngIf="isOwner()" (click)="getSummary()" mat-raised-button color="primary">Lấy kết quả</button>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-grid-list class="mb-12" cols="4" rowHeight="64px">
+        <mat-grid-tile *ngFor="let o of optPoint">
+          <button (click)="selectPoint(o)" class="btn-green" [class.selected]="o.selected" mat-raised-button>{{ o.value }}</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+      <button [disabled]="selectChange()" (click)="submit()" style="margin-left: 8px;" mat-raised-button color="primary">Chốt</button>
+      <span style="margin-left: 12px;">Đang chọn: {{ selectedOpt?.value || '...'}}</span>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div class="content">
+  <mat-card>
+    <mat-card-header class="d-flex justify-content-between pb-16">
+      <mat-card-title>Ý kiến thành viên:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let p of voteList()">{{ p.name }}: {{ p.value > 0 ? p.value : 'Quá khó'}}</mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

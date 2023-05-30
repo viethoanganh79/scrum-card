@@ -1,12 +1,12 @@
 
 <div class="nav-bar">
-  <!-- <button mat-flat-button class="p-0"><mat-icon>keyboard_arrow_left</mat-icon></button> -->
+  <button mat-flat-button class="p-0 bg-main" disabled></button>
   Nhập Knox ID
 </div>
-<div class="d-flex" style="position: relative;">
+<div class="content d-flex justify-content-between">
   <mat-form-field>
     <mat-label>Knox ID</mat-label>
     <input matInput [(ngModel)]="inputUser">
   </mat-form-field>
-  <button [disabled]="!inputChange()" (click)="gotoBoard()" style="position: absolute; right: 0;" mat-raised-button color="primary">Dzô...</button>
+  <button [disabled]="!inputChange()" (click)="gotoBoard()" mat-raised-button color="primary">Dzô...</button>
 </div>

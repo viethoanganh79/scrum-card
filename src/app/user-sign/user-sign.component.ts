@@ -27,7 +27,8 @@ export class UserSignComponent {
   }
 
   gotoBoard() {
-    this.router.navigateByUrl('/board')
+    localStorage.setItem('zzz', this.inputUser);
+    this.router.navigateByUrl('/topic');
   }
 
 }

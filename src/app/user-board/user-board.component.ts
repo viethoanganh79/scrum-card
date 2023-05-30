@@ -11,23 +11,37 @@ export class UserBoardComponent {
 
   private router = inject(Router);
   private db = inject(Firestore);
-  private _knox = collection(this.db, 'knox');
-  private _userList: any[] = [];
-  inputUser = '';
+  private _topic = collection(this.db, 'topic');
+  _topicList: any[] = [];
+  inputId = '';
 
   constructor() {}
 
   async ngOnInit() {
-    let a = await getDocs(query(this._knox, where("status", "==", true)));
-    a.forEach(_ => { this._userList.push(_.id)});
+    let a = await getDocs(query(this._topic));
+    a.forEach(_ => { this._topicList.push(_.data())});
+    this._topicList.sort((a, b) => b.id - a.id);
   }
 
   inputChange() {
-    return this._userList.includes(this.inputUser);
+    return !this.inputId || this._topicList.find(t => t.id == this.inputId);
+  }
+
+  createNewTopic() {
+    let newTopic = {
+      id: +this.inputId,
+      owner: localStorage.getItem('zzz'),
+    }
+    setDoc(doc(this._topic), newTopic);
+    this.router.navigateByUrl(`/topic/${this.inputId}`);
+  }
+
+  goTopic(id: any) {
+    this.router.navigateByUrl(`/topic/${id}`);
   }
 
   goback() {
-    this.router.navigateByUrl('/scrum')
+    this.router.navigateByUrl('/scrum');
   }
 
 }
